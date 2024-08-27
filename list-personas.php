@@ -44,7 +44,7 @@
 
             while ($row = pg_fetch_assoc($result)) {
               echo "<tr>";
-              echo "<td>{$row['id']}</td>";
+              echo "<td>{$row['idpersona']}</td>";
               echo "<td>{$row['documento']}</td>";
               echo "<td>{$row['nombre']}</td>";
               echo "<td>{$row['apellido']}</td>";
