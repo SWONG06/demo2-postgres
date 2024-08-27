@@ -2,11 +2,11 @@
 
 	function conexion(){
 
-	$host = "host=xxxx";
-	$port = "port=xxxx";
-	$dbname = "dbname=xxxx";
-	$user = "user=xxxx";
-	$password = "password=xxxx";
+	$host = "host=meticulous-empathy.railway.internal";
+	$port = "port=5432";
+	$dbname = "dbname=railway";
+	$user = "user=postgres";
+	$password = "password=zGRVNQWBKscmTYgOEVyvNOxtvrLOpZOV";
 
 	$db = pg_connect("$host $port $dbname $user $password");
 
