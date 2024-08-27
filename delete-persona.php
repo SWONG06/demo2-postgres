@@ -2,7 +2,7 @@
 include("conexion.php");
 $con = conexion();
 
-$id = $_POST["idpersona"];
+$id = $_POST["id"];
 
 $sql = "DELETE FROM persona WHERE idpersona = $1";
 pg_query_params($con, $sql, array($id));
