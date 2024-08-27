@@ -2,8 +2,8 @@
 
 	function conexion(){
 
-	$host = "host=meticulous-empathy.railway.internal";
-	$port = "port=5432";
+	$host = "host=autorack.proxy.rlwy.net";
+	$port = "port=47797";
 	$dbname = "dbname=railway";
 	$user = "user=postgres";
 	$password = "password=zGRVNQWBKscmTYgOEVyvNOxtvrLOpZOV";
