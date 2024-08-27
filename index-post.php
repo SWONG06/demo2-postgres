@@ -11,5 +11,8 @@ $cel = $_POST["cel"];
 $sql = "insert into persona values(default,'$doc','$nom','$ape','$dir','$cel')";
 pg_query($con, $sql);
 
+session_start();
+$_SESSION['message'] = 'Persona registrada correctamente...';
+
 header("location:index.php");
 ?>
