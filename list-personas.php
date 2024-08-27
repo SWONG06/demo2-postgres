@@ -47,7 +47,7 @@
               echo "<td>{$row['id']}</td>";
               echo "<td>{$row['documento']}</td>";
               echo "<td>{$row['nombre']}</td>";
-              echo "<td>{$row['apellidos']}</td>";
+              echo "<td>{$row['apellido']}</td>";
               echo "<td>{$row['direccion']}</td>";
               echo "<td>{$row['celular']}</td>";
               echo "<td>
