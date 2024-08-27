@@ -52,7 +52,7 @@
               echo "<td>{$row['celular']}</td>";
               echo "<td>
                       <form action='delete-persona.php' method='post' style='display:inline;'>
-                        <input type='hidden' name='id' value='{$row['id']}'>
+                        <input type='hidden' name='id' value='{$row['idpersona']}'>
                         <button type='submit' class='btn btn-danger btn-sm'>Eliminar</button>
                       </form>
                     </td>";
