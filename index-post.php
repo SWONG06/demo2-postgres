@@ -8,11 +8,11 @@ $ape = $_POST["ape"];
 $dir = $_POST["dir"];
 $cel = $_POST["cel"];
 
-$sql = "INSERT INTO persona VALUES (DEFAULT, '$doc', '$nom', '$ape', '$dir', '$cel')";
+$sql = "INSERT INTO usuarios VALUES (DEFAULT, '$doc', '$nom', '$ape', '$dir', '$cel')";
 pg_query($db, $sql); // ← usamos $conn aquí
 
 session_start();
-$_SESSION['message'] = 'Persona registrada correctamente...';
+$_SESSION['message'] = 'Usuario registrado correctamente...';
 
 header("Location: index.php");
 exit;
