@@ -35,7 +35,7 @@ echo "<!DOCTYPE html>
 <h2>Listado de personas registradas</h2>
 
 <div class='nav'>
-    <a href='registro.php'>➕ Registrar nueva persona</a>
+    <a href='list-personas.php'>➕ Registrar nueva persona</a>
     <a href='index.php'>🏠 Volver al inicio</a>
 </div>
 
