@@ -8,8 +8,9 @@ $ape = $_POST["ape"];
 $dir = $_POST["dir"];
 $cel = $_POST["cel"];
 
-$sql = "INSERT INTO persona VALUES (DEFAULT, '$doc', '$nom', '$ape', '$dir', '$cel')";
-pg_query($db, $sql); // ← usamos $conn aquí
+$sql = "INSERT INTO persona (documento, nombre, apellido, direccion, celular)
+        VALUES ('$doc', '$nom', '$ape', '$dir', '$cel')";
+pg_query($db, $sql);
 
 session_start();
 $_SESSION['message'] = 'Usuario registrado correctamente...';
