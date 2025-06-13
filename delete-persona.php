@@ -1,11 +1,13 @@
 <?php
 include("conexion.php");
-$con = conexion();
+$db = conexion();
 
-$id = $_POST["id"];
-
-$sql = "DELETE FROM persona WHERE idpersona = $1";
-pg_query_params($con, $sql, array($id));
+if (isset($_GET['id'])) {
+    $id = intval($_GET['id']);
+    $query = "DELETE FROM persona WHERE idpersona = $id";
+    pg_query($db, $query);
+}
 
 header("Location: listar.php");
+exit;
 ?>
