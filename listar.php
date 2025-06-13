@@ -16,11 +16,29 @@ echo "<!DOCTYPE html>
         th { background-color: #f2f2f2; }
         tr:hover { background-color: #f9f9f9; }
         h2 { color: #333; }
+        .nav { margin-bottom: 20px; }
+        .nav a {
+            margin-right: 10px;
+            text-decoration: none;
+            background: #4CAF50;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 5px;
+        }
+        .nav a:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
 
 <h2>Listado de personas registradas</h2>
+
+<div class='nav'>
+    <a href='registro.php'>➕ Registrar nueva persona</a>
+    <a href='index.php'>🏠 Volver al inicio</a>
+</div>
+
 <table>
     <tr>
         <th>ID</th>
@@ -30,7 +48,7 @@ echo "<!DOCTYPE html>
         <th>Dirección</th>
         <th>Celular</th>
     </tr>";
-
+    
 while ($row = pg_fetch_assoc($result)) {
     echo "<tr>
             <td>" . htmlspecialchars($row['idpersona']) . "</td>
