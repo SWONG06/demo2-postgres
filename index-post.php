@@ -1,5 +1,6 @@
 <?php
-include("conexion.php"); // Esto define $conn
+include("conexion.php");
+$db = conexion();
 
 $doc = $_POST["doc"];
 $nom = $_POST["nom"];
