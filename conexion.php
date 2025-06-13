@@ -1,6 +1,6 @@
 <?php
-$host = "switchback.proxy.rlwy.net";
-$port = "29708";
+$host = "nozomi.proxy.rlwy.net";
+$port = "42445";
 $dbname = "railway";
 $user = "postgres";
 $password = "FVQUdwjdylMFuwbHLzNhTBTCmOSeChAh";
