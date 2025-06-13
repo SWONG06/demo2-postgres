@@ -1,6 +1,5 @@
 <?php
-include("conexion.php");
-$conn = conexion();
+include("conexion.php"); // Esto define $conn
 
 $doc = $_POST["doc"];
 $nom = $_POST["nom"];
@@ -8,11 +7,12 @@ $ape = $_POST["ape"];
 $dir = $_POST["dir"];
 $cel = $_POST["cel"];
 
-$sql = "insert into persona values(default,'$doc','$nom','$ape','$dir','$cel')";
-pg_query($con, $sql);
+$sql = "INSERT INTO persona VALUES (DEFAULT, '$doc', '$nom', '$ape', '$dir', '$cel')";
+pg_query($conn, $sql); // ← usamos $conn aquí
 
 session_start();
 $_SESSION['message'] = 'Persona registrada correctamente...';
 
-header("location:index.php");
+header("Location: index.php");
+exit;
 ?>

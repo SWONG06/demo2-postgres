@@ -5,7 +5,7 @@ $dbname = "railway";
 $user = "postgres";
 $password = "DxyIjPxsJLXcrurXRozNmMSSCxzkXTsO";
 
-$conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
+$db = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
 
-return $conn;
+return $db;
 ?>
