@@ -1,6 +1,6 @@
 <?php
 include("conexion.php");
-$con = conexion();
+$conn = conexion();
 
 $doc = $_POST["doc"];
 $nom = $_POST["nom"];
