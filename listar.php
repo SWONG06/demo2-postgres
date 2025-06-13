@@ -28,6 +28,16 @@ echo "<!DOCTYPE html>
         .nav a:hover {
             background-color: #45a049;
         }
+        .btn {
+            padding: 5px 10px;
+            margin: 2px;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+        }
+        .edit-btn { background-color: #007BFF; }
+        .delete-btn { background-color: #dc3545; }
     </style>
 </head>
 <body>
@@ -47,6 +57,7 @@ echo "<!DOCTYPE html>
         <th>Apellido</th>
         <th>Dirección</th>
         <th>Celular</th>
+        <th>Acciones</th>
     </tr>";
     
 while ($row = pg_fetch_assoc($result)) {
@@ -57,6 +68,10 @@ while ($row = pg_fetch_assoc($result)) {
             <td>" . htmlspecialchars($row['apellido']) . "</td>
             <td>" . htmlspecialchars($row['direccion']) . "</td>
             <td>" . htmlspecialchars($row['celular']) . "</td>
+            <td>
+                <a href='editar.php?id=" . $row['idpersona'] . "' class='btn edit-btn'>📝 Editar</a>
+                <a href='delete-persona.php?id=" . $row['idpersona'] . "' class='btn delete-btn' onclick=\"return confirm('¿Estás seguro de eliminar este registro?')\">🗑️ Eliminar</a>
+            </td>
           </tr>";
 }
 
