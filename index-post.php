@@ -15,6 +15,6 @@ pg_query($db, $sql);
 session_start();
 $_SESSION['message'] = 'Usuario registrado correctamente...';
 
-header("Location: index.php");
+header("Location: listar.php");
 exit;
 ?>
